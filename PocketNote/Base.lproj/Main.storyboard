@@ -1,25 +1,234 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xhb-EE-VSm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Note Date-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PocketNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="dII-c5-C26"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cpm-zb-vgK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tk3-BS-toi">
+                                <frame key="frameInset" minY="64" width="600" height="492"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="eBV-UF-ff5"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tk3-BS-toi" secondAttribute="trailing" id="5Xm-V3-DlB"/>
+                            <constraint firstItem="Tk3-BS-toi" firstAttribute="top" secondItem="dII-c5-C26" secondAttribute="bottom" id="O1F-BR-ScR"/>
+                            <constraint firstItem="Tk3-BS-toi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fDb-3J-GiX"/>
+                            <constraint firstItem="Tk3-BS-toi" firstAttribute="bottom" secondItem="Cpm-zb-vgK" secondAttribute="top" id="k8Y-x6-NWn"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Note Date" id="let-8h-BDe">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="trash" id="iPN-OQ-PAw">
+                            <connections>
+                                <action selector="trashClicked:" destination="BYZ-38-t0r" id="Hoa-un-rRS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="settings_icon" style="done" id="ITJ-Kr-Z6B"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="navTitle" destination="let-8h-BDe" id="E27-6E-DWR"/>
+                        <outlet property="note" destination="Tk3-BS-toi" id="dwm-1H-Ki0"/>
+                        <outlet property="rightTop" destination="ITJ-Kr-Z6B" id="scV-Nx-GGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1355" y="539"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="hJA-Cm-Wjz">
+            <objects>
+                <viewController storyboardIdentifier="sbPopUpID" id="3ta-F6-huN" customClass="SettingsVC" customModule="PocketNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hsW-jd-wtI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jwu-Uj-yUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fb3-YX-TgG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-KE-rac">
+                                <frame key="frameInset" minX="150" minY="100" width="300" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOf-s1-fJJ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSq-5H-Gm1">
+                                        <state key="normal" title="ON">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dateOn:" destination="3ta-F6-huN" eventType="touchUpInside" id="PQH-uU-mlE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-ga-3Km">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periodic notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-4b-raT">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naA-EB-MBz">
+                                        <state key="normal" title="OFF">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="offNotif:" destination="3ta-F6-huN" eventType="touchUpInside" id="isn-D2-66J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhd-5p-rOk">
+                                        <state key="normal" title="1 hr">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="oneHr:" destination="3ta-F6-huN" eventType="touchUpInside" id="44o-Ng-fkI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9f-ve-vgz">
+                                        <state key="normal" title="5 hr">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fiveHr:" destination="3ta-F6-huN" eventType="touchUpInside" id="xxP-Ch-7Ou"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ7-5I-b9l">
+                                        <state key="normal" title="10 hr">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tenHr:" destination="3ta-F6-huN" eventType="touchUpInside" id="JhN-eF-htt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBP-Lx-unD">
+                                        <state key="normal" title="1/4 hr">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="quarterHr:" destination="3ta-F6-huN" eventType="touchUpInside" id="Imf-QE-Svj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuN-f1-LgX">
+                                        <state key="normal" title="OFF">
+                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dateOff:" destination="3ta-F6-huN" eventType="touchUpInside" id="eFJ-Qp-G18"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-qm-fue">
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="closeNotSave:" destination="3ta-F6-huN" eventType="touchUpInside" id="0zh-k4-mws"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oio-J9-bL2">
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="closeVC:" destination="3ta-F6-huN" eventType="touchUpInside" id="bMy-UQ-0k6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="naA-EB-MBz" firstAttribute="baseline" secondItem="UBP-Lx-unD" secondAttribute="baseline" id="1wu-9D-Kcb"/>
+                                    <constraint firstItem="UBP-Lx-unD" firstAttribute="leading" secondItem="naA-EB-MBz" secondAttribute="trailing" constant="17" id="4Kj-73-NCi"/>
+                                    <constraint firstItem="j9f-ve-vgz" firstAttribute="baseline" secondItem="FZ7-5I-b9l" secondAttribute="baseline" id="4ay-KD-nDq"/>
+                                    <constraint firstItem="naA-EB-MBz" firstAttribute="top" secondItem="0d7-4b-raT" secondAttribute="bottom" constant="14" id="6cc-dX-2uF"/>
+                                    <constraint firstAttribute="width" constant="300" id="APJ-8k-gzP"/>
+                                    <constraint firstItem="UBP-Lx-unD" firstAttribute="baseline" secondItem="fhd-5p-rOk" secondAttribute="baseline" id="BDv-SJ-mtA"/>
+                                    <constraint firstItem="oio-J9-bL2" firstAttribute="bottom" secondItem="YNM-KE-rac" secondAttribute="bottomMargin" id="DPS-FI-Vif"/>
+                                    <constraint firstItem="j9f-ve-vgz" firstAttribute="leading" secondItem="fhd-5p-rOk" secondAttribute="trailing" constant="19" id="E5X-qb-6sB"/>
+                                    <constraint firstItem="fhd-5p-rOk" firstAttribute="leading" secondItem="UBP-Lx-unD" secondAttribute="trailing" constant="15" id="EHd-xo-9yT"/>
+                                    <constraint firstAttribute="trailing" secondItem="qtr-qm-fue" secondAttribute="trailing" id="IGG-KG-TkK"/>
+                                    <constraint firstItem="fOf-s1-fJJ" firstAttribute="leading" secondItem="2lR-ga-3Km" secondAttribute="leading" id="Lye-p9-1yR"/>
+                                    <constraint firstItem="KSq-5H-Gm1" firstAttribute="baseline" secondItem="JuN-f1-LgX" secondAttribute="baseline" id="Nt7-Xm-MAS"/>
+                                    <constraint firstAttribute="bottom" secondItem="naA-EB-MBz" secondAttribute="bottom" constant="95" id="OHD-Bb-Jsa"/>
+                                    <constraint firstItem="JuN-f1-LgX" firstAttribute="trailing" secondItem="FZ7-5I-b9l" secondAttribute="trailing" constant="-3" id="SxF-Sm-O5q"/>
+                                    <constraint firstItem="FZ7-5I-b9l" firstAttribute="leading" secondItem="j9f-ve-vgz" secondAttribute="trailing" constant="21" id="XXY-W3-JTW"/>
+                                    <constraint firstAttribute="height" constant="400" id="ZaU-tB-1w0"/>
+                                    <constraint firstItem="2lR-ga-3Km" firstAttribute="leading" secondItem="0d7-4b-raT" secondAttribute="leading" id="coz-2i-OTe"/>
+                                    <constraint firstItem="KSq-5H-Gm1" firstAttribute="leading" secondItem="fOf-s1-fJJ" secondAttribute="trailing" constant="36" id="gEm-lg-eTR"/>
+                                    <constraint firstItem="oio-J9-bL2" firstAttribute="centerX" secondItem="fhd-5p-rOk" secondAttribute="centerX" id="gK8-0T-Jpc"/>
+                                    <constraint firstItem="fOf-s1-fJJ" firstAttribute="top" secondItem="YNM-KE-rac" secondAttribute="top" constant="50" id="lXS-vO-0iR"/>
+                                    <constraint firstItem="qtr-qm-fue" firstAttribute="top" secondItem="YNM-KE-rac" secondAttribute="top" id="r99-9Q-oTU"/>
+                                    <constraint firstItem="fOf-s1-fJJ" firstAttribute="trailing" secondItem="UBP-Lx-unD" secondAttribute="trailing" id="tJZ-CE-ysw"/>
+                                    <constraint firstItem="fOf-s1-fJJ" firstAttribute="top" secondItem="KSq-5H-Gm1" secondAttribute="top" constant="5" id="u6l-2J-EGs"/>
+                                    <constraint firstItem="fhd-5p-rOk" firstAttribute="baseline" secondItem="j9f-ve-vgz" secondAttribute="baseline" id="uHy-NV-wzk"/>
+                                    <constraint firstItem="2lR-ga-3Km" firstAttribute="top" secondItem="fOf-s1-fJJ" secondAttribute="bottom" constant="29" id="vMz-Fq-hDo"/>
+                                    <constraint firstItem="fhd-5p-rOk" firstAttribute="centerX" secondItem="YNM-KE-rac" secondAttribute="centerX" id="xz6-Hf-sXT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YNM-KE-rac" firstAttribute="centerY" secondItem="fb3-YX-TgG" secondAttribute="centerY" id="KyI-Rc-dgQ"/>
+                            <constraint firstItem="YNM-KE-rac" firstAttribute="centerX" secondItem="fb3-YX-TgG" secondAttribute="centerX" id="x4l-X6-Ujk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fg" destination="YNM-KE-rac" id="WVE-cN-Iff"/>
+                        <outlet property="fiveHr" destination="j9f-ve-vgz" id="FyG-2f-fPK"/>
+                        <outlet property="offDate" destination="JuN-f1-LgX" id="tU1-km-jgD"/>
+                        <outlet property="offNotif" destination="naA-EB-MBz" id="TR6-NL-RBx"/>
+                        <outlet property="on" destination="KSq-5H-Gm1" id="BnJ-o1-IgT"/>
+                        <outlet property="oneHr" destination="fhd-5p-rOk" id="cBm-le-Amj"/>
+                        <outlet property="quarterHr" destination="UBP-Lx-unD" id="qnu-Ny-H9p"/>
+                        <outlet property="tenHr" destination="FZ7-5I-b9l" id="E5d-gH-RkO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaC-tK-Rut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="539"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nwY-c4-tjs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xhb-EE-VSm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rjh-zW-hpn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T4a-mV-Rjb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ja9-cb-1Je" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="539"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings_icon" width="30" height="30"/>
+    </resources>
 </document>

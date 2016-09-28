@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F929475B1D51865D00B79948 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929475A1D51865D00B79948 /* Protocols.swift */; };
 		F95C32461D1C809C009B7D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C32451D1C809C009B7D12 /* AppDelegate.swift */; };
 		F95C32481D1C809C009B7D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C32471D1C809C009B7D12 /* ViewController.swift */; };
 		F95C324B1D1C809C009B7D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95C32491D1C809C009B7D12 /* Main.storyboard */; };
 		F95C324D1D1C809C009B7D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95C324C1D1C809C009B7D12 /* Assets.xcassets */; };
 		F95C32501D1C809C009B7D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95C324E1D1C809C009B7D12 /* LaunchScreen.storyboard */; };
 		F95C325B1D1C809C009B7D12 /* PocketNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C325A1D1C809C009B7D12 /* PocketNoteTests.swift */; };
+		F9655E381D3437F800BD8CE0 /* CD-PocketNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9655E361D3437F800BD8CE0 /* CD-PocketNote.xcdatamodeld */; };
+		F9BCC03A1D4BEE5900F785B2 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCC0391D4BEE5900F785B2 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F929475A1D51865D00B79948 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
 		F95C32421D1C809C009B7D12 /* PocketNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95C32451D1C809C009B7D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F95C32471D1C809C009B7D12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		F95C32561D1C809C009B7D12 /* PocketNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95C325A1D1C809C009B7D12 /* PocketNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketNoteTests.swift; sourceTree = "<group>"; };
 		F95C325C1D1C809C009B7D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9655E371D3437F800BD8CE0 /* CD-PocketNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CD-PocketNote.xcdatamodel"; sourceTree = "<group>"; };
+		F9BCC0391D4BEE5900F785B2 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				F95C32451D1C809C009B7D12 /* AppDelegate.swift */,
+				F9655E361D3437F800BD8CE0 /* CD-PocketNote.xcdatamodeld */,
 				F95C32471D1C809C009B7D12 /* ViewController.swift */,
+				F929475A1D51865D00B79948 /* Protocols.swift */,
+				F9BCC0391D4BEE5900F785B2 /* SettingsVC.swift */,
 				F95C32491D1C809C009B7D12 /* Main.storyboard */,
 				F95C324C1D1C809C009B7D12 /* Assets.xcassets */,
 				F95C324E1D1C809C009B7D12 /* LaunchScreen.storyboard */,
@@ -147,10 +156,17 @@
 					F95C32411D1C809C009B7D12 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = DE72KL3SZ6;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					F95C32551D1C809C009B7D12 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = DE72KL3SZ6;
+						LastSwiftMigration = 0800;
 						TestTargetID = F95C32411D1C809C009B7D12;
 					};
 				};
@@ -199,8 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F929475B1D51865D00B79948 /* Protocols.swift in Sources */,
 				F95C32481D1C809C009B7D12 /* ViewController.swift in Sources */,
+				F9BCC03A1D4BEE5900F785B2 /* SettingsVC.swift in Sources */,
 				F95C32461D1C809C009B7D12 /* AppDelegate.swift in Sources */,
+				F9655E381D3437F800BD8CE0 /* CD-PocketNote.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +350,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PocketNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Summer2016.PocketNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -342,10 +365,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PocketNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Summer2016.PocketNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -357,6 +384,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Summer2016.PocketNoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketNote.app/PocketNote";
 			};
 			name = Debug;
@@ -369,6 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Summer2016.PocketNoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketNote.app/PocketNote";
 			};
 			name = Release;
@@ -392,6 +421,7 @@
 				F95C32611D1C809C009B7D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F95C32621D1C809C009B7D12 /* Build configuration list for PBXNativeTarget "PocketNoteTests" */ = {
 			isa = XCConfigurationList;
@@ -400,8 +430,22 @@
 				F95C32641D1C809C009B7D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9655E361D3437F800BD8CE0 /* CD-PocketNote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9655E371D3437F800BD8CE0 /* CD-PocketNote.xcdatamodel */,
+			);
+			currentVersion = F9655E371D3437F800BD8CE0 /* CD-PocketNote.xcdatamodel */;
+			path = "CD-PocketNote.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F95C323A1D1C809C009B7D12 /* Project object */;
 }
